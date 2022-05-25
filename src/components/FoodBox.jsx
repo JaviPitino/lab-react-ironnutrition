@@ -4,9 +4,21 @@ function FoodBox(props) {
 
   // ! ------ DESTRUCTUR ----------
   const { image, name, calories } = props.eachFood;
-  const [ qty, setQty ] = useState(0)
+  const [ qty, setQty ] = useState(1)
 
   // ! ------ EVENTS -----------
+  const handleChange = (event) => {
+    setQty(event.target.value)
+  }
+
+  const addFoodList = (event) => {
+      event.preventDefault()
+
+      let totalCal = qty * calories
+
+
+  }
+
   const handleClick = () => {
     const theFood = {
         name,
@@ -14,10 +26,7 @@ function FoodBox(props) {
         qty
     }
     props.addFoodTotal(theFood)
-  }
-
-  const handleChange = (event) => {
-    setQty(event.target.value)
+    console.log(theFood)
   }
 
   // ! ------ RENDERIZAR JSX -----------
@@ -43,6 +52,7 @@ function FoodBox(props) {
                 <div className="media-right">
                     <div className="field has-addons">
                         <div className="control">
+                        
                             <input className="input" type="number" name="quantity" onChange={handleChange} value={qty} />
                         </div>
                         <div className="control">

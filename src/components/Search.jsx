@@ -13,13 +13,14 @@ function Search(props) {
   const handleSearch = (event) => {
     setSearch(event.target.value);
     searchList(event.target.value);
+    
   };
 
   return (
     <div>
       <form>
         <label htmlFor="search"> <strong>Buscar</strong> </label>
-        <input
+        <input className="input" 
           type="text"
           name="search"
           onChange={handleSearch}

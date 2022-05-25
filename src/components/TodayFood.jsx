@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 
-function TodayFood() {
-
-    const [ cantidad, setCantidad ] = useState(0)
+function TodayFood(props) {
 
 
   return (
     <div>
         <div className='column'>
             <p><strong> La comida de hoy </strong></p>
+        
+
         </div>
     </div>
   )
