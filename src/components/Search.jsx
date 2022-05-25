@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 
 function Search(props) {
-    
+
   //! ---- DESTRUTURAR ----
   const { searchList } = props;
 
@@ -18,7 +18,7 @@ function Search(props) {
   return (
     <div>
       <form>
-        <label htmlFor="search"> Buscar </label>
+        <label htmlFor="search"> <strong>Buscar</strong> </label>
         <input
           type="text"
           name="search"
